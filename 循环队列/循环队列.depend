@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1554656333 source:c:\users\阿钻\desktop\循环队列\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"AQueue.h"
+
+1554372122 c:\users\阿钻\desktop\循环队列\aqueue.h
+
+1554656318 source:c:\users\阿钻\desktop\循环队列\aqueue.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"AQueue.h"
+
