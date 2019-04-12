@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- 网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0，即网页初始大小占屏幕面积的100% -->
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.bootcss.com/font-awesome/5.8.0/css/all.css" rel="stylesheet" /> <!-- 字体链接-->
+</head>
+
+<body>
+    <div class="box-l">
+        <div class="search-box">
+            <input class="search-txt" type="text" placeholder="Type to search" />
+            <a class="search-btn" href="#">
+                <i class="fas fa-search"></i>
+            </a>
+        </div>
+
+        <div class="title"><h1>MAXWHOSE</h1></div>
+        <div class="container">
+            <div class="inner-width">
+                <div class="box image">
+                    <img src="./images/girl.jpg" alt="girl">
+                </div>
+                <div class="box image">
+                    <img src="./images/girl.jpg" alt="girl">
+                </div>
+                <div class="box image">
+                    <img src="./images/girl.jpg" alt="girl">
+                </div>
+                <div class="box image">
+                    <img src="./images/girl.jpg" alt="girl">
+                </div>
+                <div class="box image">
+                    <img src="./images/girl.jpg" alt="girl">
+                </div>
+                <div class="box image">
+                    <img src="./images/girl.jpg" alt="girl">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="box-r">
+        <div class="login-box">
+            <form action="#" method="POST" class="login-form">
+                <h1>Welcome</h1>
+                <input class="txtb uname" type="text" name="user" placeholder="Username" onblur="oBlur_1()"/>
+                <!-- value为空时弹出 -->
+                <div class="error_box-1"></div>
+                <input class="txtb upass" type="password" name="psw" placeholder="Password" onblur="oBlur_2()"/>
+                <!-- value为空时弹出 -->
+                <div class="error_box-2"></div>
+                <input class="login-btn" type="submit" value="Login"/>
+            </form>
+                <div class="register">
+                    <a href="#">Forget password</a>
+                    <a href="#">Register</a>
+                </div>
+        </div>
+
+        <div class="foot-nav">
+            <a href="#" class="btn">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="btn">
+                <i class="fab fa-weibo"></i>
+            </a>
+            <a href="#" class="btn">
+                <i class="fab fa-weixin"></i>
+            </a>
+            <a href="#" class="btn">
+                <i class="fab fa-qq"></i>
+            </a>
+            <a href="#" class="btn">
+                <i class="fab fa-twitch"></i>
+            </a>
+        </div>
+    </div>
+    <script>
+        var user = document.getElementsByClassName("txtb")[0];
+        var pass = document.getElementsByClassName("txtb")[1];
+        //console.log()
+        function oBlur_1(){
+            if(user.value == ""){
+                document.getElementsByClassName("error_box-1")[0].innerHTML = "请输入用户名！";
+            }
+            else{
+                document.getElementsByClassName("error_box-1")[0].innerHTML = "";
+            }
+        }
+        function oBlur_2(){
+            if(pass.value == ""){
+                document.getElementsByClassName("error_box-2")[0].innerHTML = "密码不能为空！";
+            }
+            else{
+                document.getElementsByClassName("error_box-2")[0].innerHTML = "";
+            }
+        }
+    </script>
+</body>
+
+</html>

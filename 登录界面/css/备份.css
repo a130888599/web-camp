@@ -1,0 +1,202 @@
+body{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: linear-gradient(135deg, #31354c, #9fbaa8);
+}
+a{
+    text-decoration: none;
+}
+
+/* 初始化结束 */
+
+/* box-l start */
+.box-l{
+    width: 60%;
+    /* background: #3498db; */
+    height: 100vh;  /*删除*/
+}
+/* search start */
+.search-box{
+    margin: 20px;
+    border-radius: 40px;
+    padding: 10px;
+    overflow: hidden;
+}
+.search-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    transition: 0.5s;
+}
+.search-txt{
+	float: left;
+    border: none;
+	background: none;
+	outline: none;
+    /* 去掉框的边框 */
+	padding: 0;
+	color: white;
+	font-size: 16px;
+	transition: 0.4s;
+	line-height: 40px;
+	width: 0;
+}
+.search-box:hover > .search-txt {
+    width: 40%;
+    padding: 0 6px;
+    /* padding在这里改的原因：改为flex后，width=内容宽加padding */
+}
+.search-box:hover > .search-btn {
+    background: #e84118;
+}
+
+
+/* box-r strat*/
+.box-r{
+    min-width: 300px;
+    margin: 0;
+    padding: 0;
+    width: 40%;
+    position: relative;
+    float: left;
+    /* background-color: #e84118; */
+}
+
+.login-box{
+    position: relative;
+    top: 30%;
+    right: 0;
+    /* transform: translate(-50%, -50%); */
+    color: white;
+    text-align: center;
+    /* background: #333; */
+}
+.login-form h1{
+    color: white;
+    font-weight: normal;
+    margin-top: 0;
+    font-size: 40px;
+}
+.txtb{
+    display: block;
+    box-sizing: border-box;
+    width: 240px;
+    background: #ffffff28;
+    border: 1px solid white;
+    padding: 10px 20px;
+    color: white;
+    outline: none;
+    margin: 20px auto;
+    border-radius: 6px;
+    text-align: center;
+}
+.login-btn{
+    width: 240px;
+    background: #2c3e50;
+    border: 0;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+.login-btn:hover{
+    transform: scale(1.1);
+    background: #1d567c;
+    font-size: 16px;
+}
+.register{
+    width: 240px;
+    position: relative;
+    margin: 7px auto;
+    font-size: 12px;
+}
+.register a{
+    display: block;
+    text-align: right;
+    color: #1B1464;
+}
+.register a:hover{
+    color: aliceblue;
+}
+
+/* foot-nav */
+.foot-nav{
+    position: relative;
+    top: 30%;
+    right: 1%;
+    text-align: center;
+    /* transform: translate(-50%, -50%); */
+}
+.btn{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: #9fbaa8;
+    margin: 5px;
+    border-radius: 30%;
+    box-shadow: 1px 5px 10px -5px rgba(0, 0, 0, 1);
+    text-align: center;
+    line-height: 50px;
+    overflow: hidden;
+    font-size: 20px;
+    position: relative;
+}
+.btn i{
+    transition: 0.4s linear;
+    color: #2c3e50;
+}
+.btn:hover i{
+    transform: scale(1.3);
+    color: white;
+}
+.btn::before{
+    content: '';    /*将盒子撑开*/
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+    background: #3498db;
+}
+.btn:hover::before{
+    animation: flash 1.2s 1;
+    top: -10%;
+    left: -10%;
+}
+@keyframes flash{
+    0%{
+        left: -100%;
+        top: 90%;
+    }
+    50%{
+        left: 10%;
+        top: -30%;
+    }
+    100%{
+        left: -10%;
+        top: -10%;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 400px) {	/*如果宽度小于960px则执行这个操作*/
+    .box-l{
+        width: 100%;
+    }  
+    .box-r{
+        width: 100%;
+    }
+}
